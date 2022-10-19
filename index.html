@@ -12,24 +12,25 @@
 <body>
     <header id="header">
         <div id="header-top">
-            <div id="logo"></div>
-            <div>
+            <div id="logo"><img src="./Images/logo.png" alt="Logo"></div>
+            <div class="icons">
                 <div class="search-bar">
-                    <input type="text">
-                    <i class="fa fa-search"></i>
+                    <input type="search" placeholder="Search...">
+                    <button><i class="fa fa-search"></i></button>
                 </div>
-                <a href="#" class="shopping-cart"><i class="fa fa-cart-shopping"></i></a>
-                <a href="#" class="sign-up"><i class="fa fa-sign-in"></i></a>
+                <div>
+                    <a href="#" class="shopping-cart"><i class="fa fa-cart-shopping"></i></a>
+                    <a href="#" class="sign-up"><i class="fa fa-sign-in"></i></a>
+                </div>
+                <i class="nav-icon fa fa-bars"></i>
             </div>
-        </div>
-        <div id="nav-icon">
-            <i class="fa fa-bars"></i>
         </div>
         <nav id="nav">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li class="nav-expand">
-                    <a href="#">Products</a><i class="fa fa-caret-down"></i>
+                    <a href="#">Products</a>
+                    <i class="fa fa-caret-down"></i>
                     <ul>
                         <li><a href="#">Popular</a></li>
                         <li><a href="#">Guitars</a></li>
@@ -37,8 +38,9 @@
                         <li><a href="#">Miscellaneous</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">Lessons</a><i class="fa fa-caret-down"></i>
+                <li class="nav-expand">
+                    <a href="#">Lessons</a>
+                    <i class="fa fa-caret-down"></i>
                     <ul>
                         <li><a href="#">Online Lessons</a></li>
                         <li><a href="#">Private Lessons</a></li>
@@ -47,6 +49,10 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">FAQ's</a></li>
+                <li class="search-bar">
+                    <input type="search">
+                    <button><i class="fa fa-search"></i></button>
+                </li>
             </ul>
         </nav>
     </header>
