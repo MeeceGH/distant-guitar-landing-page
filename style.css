@@ -5,6 +5,7 @@
     --medium: #565656;
     --light: #9e9e9e;
     --hot: #fba92c;
+    --hot-dark: #c5821d;
     --white: #f5f5f5;
 }
 
@@ -199,6 +200,139 @@ body {
     display: none;
 }
 
+#banner {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+#banner a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#banner .arrow-left,
+#banner .arrow-right {
+    position: absolute;
+    font-size: 3rem;
+    color: var(--white);
+    z-index: 200px;
+    z-index: 50;
+    left: 0;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+#banner .arrow-left:hover,
+#banner .arrow-right:hover {
+    color: var(--light);
+}
+
+#banner .arrow-right {
+    left: auto;
+    right: 0;
+}
+
+#banner .box-1::before {
+    background-image: url('https://images.unsplash.com/photo-1613064901196-11b7daf064ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80');
+}
+
+#banner .box-2 {
+    transform: translateX(100%);
+}
+
+#banner .box-2::before {
+    background-image: url('https://images.unsplash.com/photo-1509170051686-83f8efd35a31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+}
+
+#banner .box-3 {
+    transform: translateX(200%);
+}
+
+#banner .box-3::before {
+    background-image: url('https://images.unsplash.com/photo-1525201548942-d8732f6617a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+}
+
+#banner .box {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 65px;
+    margin-bottom: 20px;
+    transition: transform .3s ease-out;
+}
+
+#banner .box * {
+    position: relative;
+}
+
+#banner .box::before,
+#banner .box-1::before,
+#banner .box-2::before,
+#banner .box-3::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.3;
+}
+
+#banner .box h1 {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+#banner .box .box-btn {
+    background-color: var(--hot);
+    color: var(--black);
+    font-weight: 500;
+    padding: 10px 14px;
+    border-radius: 10px;
+}
+
+#banner .box .box-btn:hover {
+    background-color: var(--hot-dark);
+}
+
+#banner .circles {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#banner .circles .circle {
+    background-color: var(--white);
+    width: 10px;
+    height: 10px;
+    margin: 0 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#banner .circles .circle.active {
+    background-color: var(--hot);
+}
+
 @media (min-width: 800px) {
     #header #header-top {
         max-width: 1000px;
@@ -325,5 +459,37 @@ body {
         height: 100%;
         width: 100%;
     }
+
+    #banner {
+        width: 80%;
+        min-height: 500px;
+        margin-top: 60px;
+    }
+    
+    #banner .arrow-left,
+    #banner .arrow-right {
+        font-size: 4rem;
+    }
+
+    #banner .box {
+        border-top: 1px solid var(--hot);
+        border-bottom: 1px solid var(--hot);
+        border-radius: 3px;
+    }
+
+    #banner .box::before {
+        border-radius: 3px;
+    }
+
+    #banner .box h1 {
+        font-size: 3rem;
+        margin-bottom: 110px;
+        margin-top: 10px;
+    }
+
+    #banner .box .box-btn {
+        padding: 12px 20px;
+    }
+    
     
 }
