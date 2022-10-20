@@ -1,3 +1,4 @@
+const header = document.getElementById('header');
 const nav = document.getElementById('nav');
 const navBtn = document.querySelector('#header-top .nav-icon');
 const bannerBoxes = document.querySelectorAll('#banner .box');
@@ -8,10 +9,9 @@ const bannerArrowLeft = document.querySelector('#banner .arrow-left');
 let bannerIdx = 0;
 let bannerInterval;
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth >= 1000) {
-        nav.classList.remove('show');
-        nav.classList.remove('collapse');
+window.addEventListener('scroll', () => {
+    if (window.innerWidth >= 800) {
+        configNavFixed();
     };
 });
 
@@ -39,6 +39,15 @@ bannerCircles.forEach((circle, idx) => {
         bannerIdx = idx;
         updateBannerBox();
     });
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 800) {
+        nav.classList.remove('show');
+        configNavFixed();
+    } else if (window.innerWidth < 800) {
+        header.classList.remove('fixed');
+    };
 });
 
 function updateBannerBox() {
@@ -79,6 +88,19 @@ function setNewBannerInterval() {
         updateBannerCircles();
 
     }, 5000);
+}
+
+const getOffset = (el) => {
+    const rect = el.getBoundingClientRect();
+    return rect.bottom + window.scrollY;
+}
+
+function configNavFixed() {
+     if (nav.getBoundingClientRect().top < 0) {
+         header.classList.add('fixed');
+     } else if (scrollY < getOffset(header) - nav.offsetHeight) {
+        header.classList.remove('fixed');
+    }
 }
 
 setNewBannerInterval();

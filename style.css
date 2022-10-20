@@ -306,6 +306,8 @@ body {
     font-weight: 500;
     padding: 10px 14px;
     border-radius: 10px;
+    text-align: center;
+    min-width: 125px;
 }
 
 #banner .box .box-btn:hover {
@@ -331,6 +333,127 @@ body {
 
 #banner .circles .circle.active {
     background-color: var(--hot);
+}
+
+#home-offer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 70px;
+    border-bottom: 1px solid var(--hot);
+}
+
+#home-offer .box {
+    margin-top: 50px;
+}
+
+#home-offer .box h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#home-offer .box .box-info {
+    background-color: var(--white);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 15px;
+}
+
+#home-offer .box .box-info-second {
+    flex-direction: row-reverse;
+}
+
+#home-offer .box .box-info i {
+    font-size: 2rem;
+    padding: 0 25px;
+}
+
+#home-offer .box .box-info p {
+    padding: 0 15px;
+    font-size: 0.95rem;
+}
+
+#home-about {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+#home-about h2 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#home-about .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#home-about .box-container .box {
+    background-color: var(--white);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 150px;
+    margin: 10px;
+    padding: 0 10px;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    border-radius: 3px;
+}
+
+#home-about .box-btn {
+    background-color: var(--hot);
+    margin-top: 20px;
+    padding: 13px 23px;
+    width: 200px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    text-align: center;
+}
+
+#home-about .box-btn:hover {
+    background-color: var(--hot-dark);
+}
+
+#footer {
+    background-color: #111;
+    color: var(--white);
+    padding: 80px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    border-top: 1px solid var(--dark);
+}
+
+#footer a {
+    color: var(--hot);
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 40;
+}
+
+#footer a:hover {
+    text-decoration: underline;
 }
 
 @media (min-width: 800px) {
@@ -490,6 +613,83 @@ body {
     #banner .box .box-btn {
         padding: 12px 20px;
     }
+
+    #home-offer .box .box-info-second {
+        flex-direction: row;
+    }
+ 
+    #home-about .box-container .box {
+        background-color: var(--white);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 180px;
+        margin: 15px;
+        padding: 0 10px;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        border-radius: 3px;
+    }
+
+    #header.fixed #nav {
+        position: fixed;
+        top: 0;
+        max-width: 100vw;
+        z-index: 200;
+        background-color: var(--white);
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid var(--black);
+        border-radius: 0 0 10px 10px;
+    }
+
+    #header.fixed #nav ul {
+        width: auto;
+        background-color: var(--white);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
     
+    #header.fixed #header-top {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1165px) {
+
+    #home-offer {
+        flex-direction: row;
+    }
     
+    #home-offer .box {
+        margin: 50px 30px 0;
+        max-width: 400px;
+    }
+    
+    #home-offer .box h3 {
+        font-size: 1.7rem;
+        margin-bottom: 25px;
+        white-space: nowrap;
+    }
+    
+    #home-offer .box .box-info {
+        padding: 40px 15px;
+    }
+    
+    #home-offer .box .box-info-second {
+        flex-direction: row;
+    }
+    
+    #home-offer .box .box-info i {
+        font-size: 2.5rem;
+        padding: 0 25px;
+    }
+    
+    #home-offer .box .box-info p {
+        padding: 0 5px;
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
 }
